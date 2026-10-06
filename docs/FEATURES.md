@@ -26,7 +26,7 @@ This checklist separates implemented behavior from external service access and p
 
 ## Further work and explicit limits
 
-- **Convex AI Gateway/Jev live access:** official setup and HTTP API documentation were verified after network access was restored. Native actions are implemented and typechecked, but paid live inference requires a linked paid Convex team and has not been represented as completed. Jev Decisions is an alpha API.
+- **Convex AI Gateway/Jev live access:** official setup and HTTP API documentation were verified after network access was restored. Native actions are implemented and typechecked. Production token access and a real Jev routing request were successfully verified; generation jobs require the linked paid Convex team. Jev Decisions is an alpha API.
 - **Automatic scholarly tagging:** Jev supports typed decisions and the current curated passages include speaker/genre/topic metadata. A full-corpus automatically generated speaker/genre/audience tagging job is not yet implemented.
 - **Full-corpus AI expansion:** the CLI supports arbitrary passage lists, but a paid generation/checking run for the entire Bible has not been performed. The initial useful layer is curated and should not be described as a fully generated corpus.
 - **Full original-language word alignment:** original Hebrew/Greek source editions, proper names and lexical resources are imported; the complete TAHOT/TAGNT token-to-verse morphology corpus and cross-tradition versification mapping are not yet implemented.

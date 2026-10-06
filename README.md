@@ -4,6 +4,14 @@ Search scripture using half-remembered stories and everyday language, read avail
 
 The original product discussion is preserved in [docs/source-conversation.md](docs/source-conversation.md) as design reference. [docs/FEATURES.md](docs/FEATURES.md) records what is implemented and what still needs external access or further work.
 
+## Live application
+
+Production: https://adamant-yak-708.convex.site
+
+Convex project: https://dashboard.convex.dev/t/tony-blount/bibledatabase
+
+The checked-in `data/bible-corpus.zip` contains all 26 prepared editions and their graph/lexical data. On a new deployment, `npm run seed:bundle` imports it without downloading source repositories. Use `npm run seed:production` after deploying production. These commands require empty source tables and preserve unrelated user tables.
+
 ## Start with Convex cloud
 
 Requirements: Node.js 22+, npm, Python 3, a Convex account and network access to GitHub and Convex. This repository is already isolated in the cloud workspace; use the existing checkout. Do not create another Git worktree unless explicitly requested.
@@ -29,7 +37,7 @@ The data commands prepare full licensed editions, cross-references, curated pass
 
 `npm run seed` appends data. Run it once per fresh deployment to avoid duplicates. After inspecting your deployment, `npm run seed -- --replace-source-data` can refresh only the source tables; it deliberately preserves notes, review records and generated layer history. For production, pass `--prod`. Do not run replacement against a deployment containing source customizations you need to retain.
 
-In managed environments using an HTTP proxy with Node 24, run the CLI with `NODE_USE_ENV_PROXY=1` so it honors the configured proxy. If this network blocks the login endpoint before Convex issues a device code, account approval alone cannot fix it: allow Convex's authentication/API domains in the environment network settings and rerun `npx convex dev`. GitHub authentication and Convex authentication are separate. Without `VITE_CONVEX_URL`, the UI explains the missing cloud connection; it does not present local sample data as a live cloud deployment.
+In managed environments using an HTTP proxy with Node 24, run the CLI with `NODE_USE_ENV_PROXY=1 NODE_OPTIONS="--require ./scripts/with-proxy.cjs"` so HTTPS and WebSocket operations both honor the configured proxy while retaining TLS verification. If this network blocks the login endpoint before Convex issues a device code, account approval alone cannot fix it: allow Convex's authentication/API domains in the environment network settings and rerun `npx convex dev`. GitHub authentication and Convex authentication are separate. Without `VITE_CONVEX_URL`, the UI explains the missing cloud connection; it does not present local sample data as a live cloud deployment.
 
 ## Development and checks
 

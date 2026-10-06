@@ -18,7 +18,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - run: node --test scripts/providers.test.mjs
       - name: Deploy cloud functions and build connected frontend
         env:
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}

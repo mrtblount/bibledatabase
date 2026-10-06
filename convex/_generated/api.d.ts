@@ -8,7 +8,10 @@
  * @module
  */
 
+import type * as ai from "../ai.js";
 import type * as bible from "../bible.js";
+import type * as http from "../http.js";
+import type * as siteAssets from "../siteAssets.js";
 
 import type {
   ApiFromModules,
@@ -17,7 +20,10 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  ai: typeof ai;
   bible: typeof bible;
+  http: typeof http;
+  siteAssets: typeof siteAssets;
 }>;
 
 /**

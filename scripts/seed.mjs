@@ -9,7 +9,7 @@ const args = process.argv.slice(2);
 const dir = resolve(args.find(a => !a.startsWith('--')) || '.data');
 const replace = args.includes('--replace-source-data');
 const prod = args.includes('--prod');
-const tables = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'entityReferences', 'lexicon', 'datasetStats', 'passages', 'expansions', 'evaluationCases'];
+const tables = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'entityReferences', 'lexicon', 'passages', 'expansions', 'datasetStats'];
 if (!existsSync(dir)) throw new Error(`No seed data in ${dir}. Run the download and layer-seed scripts first.`);
 let imported = 0;
 for (const table of tables) {

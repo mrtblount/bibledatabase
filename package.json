@@ -17,7 +17,9 @@
     "download": "python3 scripts/download-data.py && python3 scripts/download-knowledge.py && node scripts/seed-layer.mjs",
     "evaluate": "npx convex run bible:runEvaluation",
     "postinstall": "node scripts/build-hosting.mjs --ensure",
-    "package:data": "python3 scripts/package-data.py"
+    "package:data": "python3 scripts/package-data.py",
+    "seed:bundle": "convex import data/bible-corpus.zip",
+    "seed:production": "convex import --prod data/bible-corpus.zip"
   },
   "dependencies": {
     "convex": "^1.38.0",
@@ -30,6 +32,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.4.0",
+    "https-proxy-agent": "^9.1.0",
     "playwright": "^1.63.0",
     "tsx": "^4.19.0",
     "typescript": "^5.8.0",
