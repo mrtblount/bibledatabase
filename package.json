@@ -8,7 +8,7 @@
     "build": "node scripts/build-hosting.mjs --ensure && tsc --noEmit && vite build && node scripts/build-hosting.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "backend": "convex dev",
-    "test": "tsx --test tests/*.test.ts scripts/*.test.mjs",
+    "test": "python3 scripts/prepare-fixtures.py && tsx --test tests/*.test.ts scripts/*.test.mjs",
     "seed": "node scripts/seed.mjs",
     "check": "tsc --noEmit",
     "validate:data": "node scripts/validate-data.mjs",
