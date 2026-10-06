@@ -1,0 +1,62 @@
+{
+  "stepEntities": 4258,
+  "theographicEntities": 4791,
+  "entities": 9049,
+  "lexiconEntries": 21293,
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/1f3423d42400f59f1f30fe08f74e38fcd3bbf7bc/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",
+      "file": ".data/raw/TBESG.txt",
+      "bytes": 4736912,
+      "sha256": "312f723d7b8ef263bbdfb0451c9b8057125804dfff390b6f8544cff2a84b57f4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/1f3423d42400f59f1f30fe08f74e38fcd3bbf7bc/Lexicons/TBESH%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Hebrew%20-%20STEPBible.org%20CC%20BY.txt",
+      "file": ".data/raw/TBESH.txt",
+      "bytes": 3288045,
+      "sha256": "464dccadd95fd8620dd05fa0d7a4caba58ec3c4d5db3ebf38e43d046ca25b591"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/1f3423d42400f59f1f30fe08f74e38fcd3bbf7bc/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt",
+      "file": ".data/raw/TIPNR.txt",
+      "bytes": 7967834,
+      "sha256": "aaec5b0af6e539b74536bd3b8b93e3acbe344290865c5e0728252787d0a8358e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc/json/events.json",
+      "file": ".data/raw/theographic-events.json",
+      "bytes": 1738924,
+      "sha256": "59dc86b8ff124813488fa036ffb70ff83127e024aa6ccd326c905d5c5018b5a9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc/json/people.json",
+      "file": ".data/raw/theographic-people.json",
+      "bytes": 5072606,
+      "sha256": "76041eba0b6f36c36514802fcfa69a068cbf06ef7b57aaec82909f509e3b6fb4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc/json/places.json",
+      "file": ".data/raw/theographic-places.json",
+      "bytes": 2374841,
+      "sha256": "5a8e929baa4701602e461e66271a0fa6e9f6f6629635053f1a1e4bbcfce06c14"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc/json/verses.json",
+      "file": ".data/raw/theographic-verses.json",
+      "bytes": 37214043,
+      "sha256": "471b7d7648acd4cf5300437acd9d048514f6a5da1f34f4ce2e43ef9eeec0e858"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/1f3423d42400f59f1f30fe08f74e38fcd3bbf7bc/README.md",
+      "file": "data/licenses/STEPBible.md",
+      "bytes": 14495,
+      "sha256": "261d5157c0ffeadeedad3f734db945a4c3642e3e4ce5fa28002985b6c52437b1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/robertrouse/theographic-bible-metadata/cfb1c485d4da6fb63a69cb3b7f5b0752792f46bc/LICENSE",
+      "file": "data/licenses/Theographic.txt",
+      "bytes": 20131,
+      "sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297"
+    }
+  ]
+}

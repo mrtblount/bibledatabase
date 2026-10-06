@@ -9,6 +9,7 @@ if (!existsSync(path)) throw new Error(`Missing ${path}. Download source data fi
 for await (const line of createInterface({input:createReadStream(path), crlfDelay:Infinity})) {
  if (!line.trim()) continue;
  const v=JSON.parse(line);
+ v.ref ||= v.reference;
  if (!v.translation || !v.book || !Number.isInteger(v.chapter) || !Number.isInteger(v.verse) || typeof v.text !== 'string' || !v.text.trim() || !v.ref) throw new Error(`Invalid verse at row ${total+1}`);
  const key=`${v.translation}:${v.ref}`;
  if (keys.has(key)) throw new Error(`Duplicate verse ${key}`);

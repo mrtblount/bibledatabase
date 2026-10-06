@@ -1,0 +1,31 @@
+name: Deploy Convex cloud
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: convex-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: node --test scripts/providers.test.mjs
+      - name: Deploy cloud functions and build connected frontend
+        env:
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+        run: |
+          test -n "$CONVEX_DEPLOY_KEY" || { echo 'Configure the production CONVEX_DEPLOY_KEY secret.'; exit 1; }
+          npm run deploy
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lumen-production-web
+          path: dist

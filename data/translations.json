@@ -1,0 +1,119 @@
+[
+  {
+    "id": "KJV",
+    "name": "King James Version: Pure Cambridge Edition",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/KJVPCE.json",
+    "verseCount": 31098,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "BSB",
+    "name": "Berean Standard Bible",
+    "language": "en",
+    "license": "Creative Commons CC0",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/BSB.json",
+    "verseCount": 31086,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "ASV",
+    "name": "American Standard Version (1901)",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/ASV.json",
+    "verseCount": 31086,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "BBE",
+    "name": "1949/1964 Bible in Basic English",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/BBE.json",
+    "verseCount": 31086,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "DARBY",
+    "name": "Darby Bible (1889)",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/Darby.json",
+    "verseCount": 31099,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "DRC",
+    "name": "Douay-Rheims Bible, Challoner Revision",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/DRC.json",
+    "verseCount": 35805,
+    "description": "Complete available source edition; 78 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "GENEVA1599",
+    "name": "Geneva Bible (1599)",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/Geneva1599.json",
+    "verseCount": 31064,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "JPS",
+    "name": "Jewish Publication Society Old Testament",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/JPS.json",
+    "verseCount": 23194,
+    "description": "Complete available source edition; 39 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "NHEB",
+    "name": "New Heart English Bible",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/NHEB.json",
+    "verseCount": 31097,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "WEBSTER",
+    "name": "Webster Bible",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/Webster.json",
+    "verseCount": 31102,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "YLT",
+    "name": "Young's Literal Translation (1898)",
+    "language": "en",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/YLT.json",
+    "verseCount": 31102,
+    "description": "Complete available source edition; 66 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "WLC",
+    "name": "Westminster Leningrad Codex",
+    "language": "hbo",
+    "license": "Public Domain",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/WLC.json",
+    "verseCount": 23213,
+    "description": "Complete available source edition; 39 books. Verse numbering follows this edition."
+  },
+  {
+    "id": "STATRESGNT",
+    "name": "Statistical Restoration Greek New Testament",
+    "language": "grc",
+    "license": "Creative Commons: BY 4.0",
+    "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json/StatResGNT.json",
+    "verseCount": 7914,
+    "description": "Complete available source edition; 84 books. Verse numbering follows this edition."
+  }
+]
