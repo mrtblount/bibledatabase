@@ -2,6 +2,18 @@
 
 Application code and imported data have separate licenses. Scripture quotations are always stored separately from editorial descriptions, discovery phrases, annotations, and AI-generated drafts. Translation numbering is preserved; the app does not assume every edition has identical verses or canons.
 
+## Committed complete corpus bundle
+
+`data/bible-corpus.zip` is committed to GitHub and contains the **26-edition corpus (631,885 verses)** plus all public cross-references, entities, entity relationships, lexicon entries, passage seeds, expansion seeds, and matching dataset counts. It uses Convex's `<table>/documents.jsonl` archive layout. It contains no user notes, saved passages, private reviews, jobs, or evaluation history. `data/bundle-manifest.json` records exact table counts, per-table hashes, the archive SHA-256, and license/provenance links. The archive is under GitHub's 100 MiB per-file limit.
+
+For a fresh Convex deployment, import the committed archive:
+
+```sh
+npx convex import data/bible-corpus.zip
+```
+
+On a populated deployment, review Convex's import behavior before selecting append or replacement; replacing source tables also replaces the bundled editorial seed tables. Rebuild the same 26-edition source scope by running `download-data.py --all`, `download-knowledge.py`, the layer seed command from README, and `python scripts/bundle-data.py`. The default 13-edition development export documented below remains a smaller installation profile; it is not the committed archive's scope.
+
 ## Reproduce the database
 
 ```sh

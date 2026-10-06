@@ -16,7 +16,7 @@ try {
   await page.getByLabel('Search Scripture').waitFor({ timeout: 20000 });
   await page.waitForFunction(() => document.querySelectorAll('select[aria-label="Translation"] option').length > 1, null, { timeout: 20000 });
   await mkdir('test-results', { recursive: true });
-  await page.screenshot({ path: 'test-results/desktop-discover.png', fullPage: true });
+  await page.screenshot({ path: 'test-results/desktop-discover.png', fullPage: true, animations: 'disabled' });
   for (const [query, reference] of [
     ["Who's that dude that just barely made it to heaven? He squeezed himself in at the last minute.", 'Luke 23:39'],
     ['The guy who fell asleep during a sermon and fell out a window.', 'Acts 20:'],
@@ -84,7 +84,7 @@ try {
     await page.getByRole('button', { name: 'Open navigation' }).click();
     await page.getByRole('button', { name: 'Discover', exact: true }).click();
     await page.getByLabel('Search Scripture').waitFor();
-    await page.screenshot({ path: 'test-results/mobile-discover.png', fullPage: true });
+    await page.screenshot({ path: 'test-results/mobile-discover.png', fullPage: true, animations: 'disabled' });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 2);
     assert.equal(overflow, false);
   });

@@ -1,0 +1,280 @@
+{
+  "file": "data/bible-corpus.zip",
+  "format": "Convex ZIP import: <table>/documents.jsonl",
+  "bytes": 40538054,
+  "sha256": "f87f9d247e0b9b43ef578e7aac2b0228a6bdd51721bdd68faea4a94958302594",
+  "tables": {
+    "translations": {
+      "rows": 26,
+      "uncompressedBytes": 9752,
+      "sha256": "11e9114437110f8b28ae14c338bf3d931510d2e655c250a7b3038c55bf3c67a8"
+    },
+    "books": {
+      "rows": 1371,
+      "uncompressedBytes": 105785,
+      "sha256": "522c9e524ea6284d11d560c5d1e52cbac973778e9c6efaf3ce4d5dd2cea25d73"
+    },
+    "verses": {
+      "rows": 631885,
+      "uncompressedBytes": 157670372,
+      "sha256": "9b9071508978215367c77a4825b2733d1ea20ce346de0996c375ea6cb9fa1306"
+    },
+    "crossReferences": {
+      "rows": 344799,
+      "uncompressedBytes": 37687502,
+      "sha256": "42917e6202a8e3afc75ae83f3596555f13b47d107991c2ceee5b56da66fe1b99"
+    },
+    "entities": {
+      "rows": 9049,
+      "uncompressedBytes": 2928473,
+      "sha256": "b668ad30efcbd62f941d28972605532915afbe64029cd013d60319aa6b217ef0"
+    },
+    "entityReferences": {
+      "rows": 85266,
+      "uncompressedBytes": 5230127,
+      "sha256": "188d638d9342e6f1b194c95413d8e1928fdd60588346a032185802569e588785"
+    },
+    "lexicon": {
+      "rows": 21293,
+      "uncompressedBytes": 7241745,
+      "sha256": "f72f76134518001142a3d2b9d983949145da83284307cea4892d9d25f935f00f"
+    },
+    "passages": {
+      "rows": 102,
+      "uncompressedBytes": 232952,
+      "sha256": "8a86061e45b0e1af117214d67531a0b0de283ce2a020e39578be4a1c8255f011"
+    },
+    "expansions": {
+      "rows": 510,
+      "uncompressedBytes": 1056720,
+      "sha256": "d4361de12eeae4579a41d3edcb6356fbb18d8600a46c7eea6b3b356cee13a220"
+    },
+    "datasetStats": {
+      "rows": 9,
+      "uncompressedBytes": 312,
+      "sha256": "de3abfe8cbbc8c5b4afe8335e63945de903b04fba4cbff31503b0e0629e4f80c"
+    }
+  },
+  "privacy": "Public source and editorial seed tables only; excludes user notes, saved passages, private reviews, jobs and evaluation history.",
+  "canonicalSourceManifest": "data/extended-source-manifest.json",
+  "knowledgeSourceManifest": "data/knowledge-manifest.json",
+  "supplementalVerseProvenance": "data/verse-provenance.json",
+  "attribution": "SOURCES.md",
+  "licenses": [
+    "data/licenses/STEPBible.md",
+    "data/licenses/Theographic.txt",
+    "data/licenses/ArulJohn-KJV.txt"
+  ],
+  "translations": [
+    {
+      "id": "KJV",
+      "name": "King James Version (PCE with documented transcription supplements)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/KJVPCE.json",
+      "verseCount": 31102
+    },
+    {
+      "id": "BSB",
+      "name": "Berean Standard Bible",
+      "language": "en",
+      "license": "Creative Commons CC0",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/BSB.json",
+      "verseCount": 31086
+    },
+    {
+      "id": "ASV",
+      "name": "American Standard Version (1901)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/ASV.json",
+      "verseCount": 31086
+    },
+    {
+      "id": "BBE",
+      "name": "1949/1964 Bible in Basic English",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/BBE.json",
+      "verseCount": 31086
+    },
+    {
+      "id": "DARBY",
+      "name": "Darby Bible (1889)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Darby.json",
+      "verseCount": 31099
+    },
+    {
+      "id": "DRC",
+      "name": "Douay-Rheims Bible, Challoner Revision",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/DRC.json",
+      "verseCount": 35805
+    },
+    {
+      "id": "GENEVA1599",
+      "name": "Geneva Bible (1599)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Geneva1599.json",
+      "verseCount": 31064
+    },
+    {
+      "id": "JPS",
+      "name": "Jewish Publication Society Old Testament",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/JPS.json",
+      "verseCount": 23194
+    },
+    {
+      "id": "NHEB",
+      "name": "New Heart English Bible",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEB.json",
+      "verseCount": 31097
+    },
+    {
+      "id": "WEBSTER",
+      "name": "Webster Bible",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Webster.json",
+      "verseCount": 31102
+    },
+    {
+      "id": "YLT",
+      "name": "Young's Literal Translation (1898)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/YLT.json",
+      "verseCount": 31102
+    },
+    {
+      "id": "WLC",
+      "name": "Westminster Leningrad Codex",
+      "language": "hbo",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/WLC.json",
+      "verseCount": 23213
+    },
+    {
+      "id": "STATRESGNT",
+      "name": "Statistical Restoration Greek New Testament",
+      "language": "grc",
+      "license": "Creative Commons: BY 4.0",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/StatResGNT.json",
+      "verseCount": 7914
+    },
+    {
+      "id": "NHEBJE",
+      "name": "New Heart English Bible: Jehovah Edition",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEBJE.json",
+      "verseCount": 31097
+    },
+    {
+      "id": "NHEBME",
+      "name": "New Heart English Bible: Messianic Edition",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEBME.json",
+      "verseCount": 31097
+    },
+    {
+      "id": "OEB",
+      "name": "Open English Bible (US Spelling)",
+      "language": "en",
+      "license": "Creative Commons: CC0",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/OEB.json",
+      "verseCount": 10348
+    },
+    {
+      "id": "OEBCTH",
+      "name": "Open English Bible (Commonwealth Spelling)",
+      "language": "en",
+      "license": "Creative Commons: CC0",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/OEBcth.json",
+      "verseCount": 10348
+    },
+    {
+      "id": "CPDV",
+      "name": "Catholic Public Domain Version",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/CPDV.json",
+      "verseCount": 35812
+    },
+    {
+      "id": "ACV",
+      "name": "A Conservative Version",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/ACV.json",
+      "verseCount": 31102
+    },
+    {
+      "id": "ANDERSON",
+      "name": "Henry Tompkins Anderson’s 1864 New Testament",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Anderson.json",
+      "verseCount": 7946
+    },
+    {
+      "id": "HAWEIS",
+      "name": "Thomas Haweis 1795 New Testament",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Haweis.json",
+      "verseCount": 7957
+    },
+    {
+      "id": "NOYES",
+      "name": "1869 Noyes Translation",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Noyes.json",
+      "verseCount": 18212
+    },
+    {
+      "id": "ROTHERHAM",
+      "name": "The Emphasised Bible by J. B. Rotherham",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Rotherham.json",
+      "verseCount": 31086
+    },
+    {
+      "id": "TYNDALE",
+      "name": "William Tyndale Bible (1525/1530)",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Tyndale.json",
+      "verseCount": 7888
+    },
+    {
+      "id": "TWENTY",
+      "name": "Twentieth Century New Testament",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Twenty.json",
+      "verseCount": 7940
+    },
+    {
+      "id": "UKJV",
+      "name": "Updated King James Version",
+      "language": "en",
+      "license": "Public Domain",
+      "sourceUrl": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/UKJV.json",
+      "verseCount": 31102
+    }
+  ],
+  "derivedContentNotice": "Passage descriptions and expansions are editorial seed data, stored separately from canonical verses. Entity refs are previews; entityReferences preserves all source links.",
+  "rebuild": "python scripts/bundle-data.py --source-dir .data/all-verify --knowledge-dir .data --output data/bible-corpus.zip"
+}
