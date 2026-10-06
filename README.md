@@ -17,8 +17,8 @@ Complete Convex's device/browser login when prompted, select or create the cloud
 
 ```sh
 python3 scripts/download-data.py --all
-node scripts/seed-layer.mjs
 python3 scripts/download-knowledge.py
+node scripts/seed-layer.mjs
 python3 scripts/catalog-translations.py
 npm run validate:data
 npm run seed
@@ -29,7 +29,7 @@ The data commands prepare full licensed editions, cross-references, curated pass
 
 `npm run seed` appends data. Run it once per fresh deployment to avoid duplicates. After inspecting your deployment, `npm run seed -- --replace-source-data` can refresh only the source tables; it deliberately preserves notes, review records and generated layer history. For production, pass `--prod`. Do not run replacement against a deployment containing source customizations you need to retain.
 
-If this network blocks the login endpoint before Convex issues a device code, account approval alone cannot fix it: allow Convex's authentication/API domains in the environment network settings and rerun `npx convex dev`. GitHub authentication and Convex authentication are separate. Without `VITE_CONVEX_URL`, the UI explains the missing cloud connection; it does not present local sample data as a live cloud deployment.
+In managed environments using an HTTP proxy with Node 24, run the CLI with `NODE_USE_ENV_PROXY=1` so it honors the configured proxy. If this network blocks the login endpoint before Convex issues a device code, account approval alone cannot fix it: allow Convex's authentication/API domains in the environment network settings and rerun `npx convex dev`. GitHub authentication and Convex authentication are separate. Without `VITE_CONVEX_URL`, the UI explains the missing cloud connection; it does not present local sample data as a live cloud deployment.
 
 ## Development and checks
 
@@ -53,7 +53,7 @@ node scripts/generate-layer.mjs --dry-run
 node scripts/generate-layer.mjs --limit 1 --max-requests 10
 ```
 
-See [docs/AI-PIPELINE.md](docs/AI-PIPELINE.md) for the 50-passage pilot, import procedure, provider settings, cost controls, quote verification, and the unverified Convex Gateway/Jev status. Set `CONVEX_ADMIN_KEY` securely in the deployment to enable privileged review operations; never put it in a `VITE_` environment variable.
+Native Convex AI Gateway and Jev decision actions are also implemented for paid Convex teams: set `BIBLE_AI_PROVIDER=convex`, the deployment URL and admin key. See [docs/AI-PIPELINE.md](docs/AI-PIPELINE.md) for the 50-passage pilot, provider settings, Jev routing/reranking and live-access limitations. Set `CONVEX_ADMIN_KEY` securely in the deployment to enable privileged review operations; never put it in a `VITE_` environment variable.
 
 ## Deploy
 
@@ -65,7 +65,7 @@ npm run deploy
 npm run seed -- --prod
 ```
 
-`npm run deploy` deploys Convex functions and builds the frontend with the resulting `VITE_CONVEX_URL`. Serve the generated `dist/` with an SPA-compatible static host. `vercel.json` supplies the route fallback for Vercel. The manual GitHub Actions workflow **Deploy Convex cloud** uses the `production` environment's `CONVEX_DEPLOY_KEY` secret and uploads the frontend as an artifact. It does not silently seed or replace production data and does not publish that artifact to a web host. Configure the web host's build/deploy integration separately.
+The frontend can be hosted directly by the Convex deployment at its **`.convex.site` HTTP action URL**. `node scripts/build-hosting.mjs` packages the built `dist/` assets into the HTTP route module before deployment; run `node scripts/build-hosting.mjs --ensure` before a fresh checkout's first typecheck when the generated module is absent. Hashed assets use immutable caching; the HTML shell uses no-cache and supports app routes. Ensure the Vite build uses the cloud `VITE_CONVEX_URL` before packaging. The manual GitHub Actions workflow **Deploy Convex cloud** uses the `production` environment's `CONVEX_DEPLOY_KEY` secret and also uploads the frontend as an artifact. It does not silently seed or replace production data. An external static host is optional; `vercel.json` supplies its SPA route fallback.
 
 CI validates build and tests on pushes and pull requests. Never store API tokens, deploy keys or private environment files in the repository.
 

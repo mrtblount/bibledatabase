@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc --noEmit && vite build",
+    "build": "node scripts/build-hosting.mjs --ensure && tsc --noEmit && vite build && node scripts/build-hosting.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "backend": "convex dev",
     "test": "tsx --test tests/*.test.ts scripts/*.test.mjs",
@@ -15,7 +15,9 @@
     "deploy": "convex deploy --cmd \"npm run build\" --cmd-url-env-var-name VITE_CONVEX_URL",
     "test:ui": "node tests/ui-smoke.mjs",
     "download": "python3 scripts/download-data.py && python3 scripts/download-knowledge.py && node scripts/seed-layer.mjs",
-    "evaluate": "npx convex run bible:runEvaluation"
+    "evaluate": "npx convex run bible:runEvaluation",
+    "postinstall": "node scripts/build-hosting.mjs --ensure",
+    "package:data": "python3 scripts/package-data.py"
   },
   "dependencies": {
     "convex": "^1.38.0",

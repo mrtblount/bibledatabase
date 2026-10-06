@@ -8,6 +8,7 @@ const translationArg = { translation: v.string() };
 const limitOf = (n: number | undefined, fallback = 20) => Math.max(1, Math.min(n ?? fallback, 100));
 const asVerse = (row: any) => ({ ...row, ref: row.reference });
 const normalizeTranslation = (s: string) => s.trim().toUpperCase();
+const generationKey = (row: any) => row.provenance?.runId ?? row.version ?? String(row._id);
 function requireSession(sessionId: string) {
   if (!/^[a-zA-Z0-9_-]{24,128}$/.test(sessionId)) throw new Error("A valid private workspace session is required.");
 }
@@ -51,18 +52,17 @@ export const search = query({ args: { q: v.string(), translation: v.string(), mo
   const literal = literalRows.map((row, index) => ({ ref: row.reference, title: row.reference, text: row.text, book: row.book, chapter: row.chapter, verse: row.verse, endVerse: row.verse, score: 1 / (index + 1), reason: "Matches the words in the selected translation", tags: [] as string[], translation }));
   if (args.mode === "literal") return { results: literal, route: "literal" };
   const approvedCandidates = await ctx.db.query("expansions").withSearchIndex("search_text", (s) => s.search("text", q).eq("status", "approved")).take(Math.min(limit * 3, 100));
-  const supersededEntries = new Set(approvedCandidates.flatMap((entry) => entry.provenance?.priorEntryIds ?? []));
   const versionGroups = await Promise.all([...new Set(approvedCandidates.map((entry) => entry.passageRef))].map(async (ref) => {
     const versions = await ctx.db.query("expansions").withIndex("by_ref", (index) => index.eq("passageRef", ref)).order("desc").take(200);
-    const active = new Map<string, typeof versions[number]>();
+    const active = new Map<string, string>();
     for (const version of versions.filter((row) => row.status === "approved" && !row.supersededBy).sort((a, b) => (b.createdAt ?? b._creationTime) - (a.createdAt ?? a._creationTime))) {
       const key = `${version.translation}:${version.type}`;
-      if (!active.has(key)) active.set(key, version);
+      if (!active.has(key)) active.set(key, generationKey(version));
     }
-    return [...active.values()].map((row) => String(row._id));
+    return versions.filter((row) => row.status === "approved" && !row.supersededBy && active.get(`${row.translation}:${row.type}`) === generationKey(row)).map((row) => String(row._id));
   }));
   const activeIds = new Set(versionGroups.flat());
-  const approved = approvedCandidates.filter((entry) => activeIds.has(String(entry._id)) && !entry.supersededBy && !supersededEntries.has(entry.provenance?.entryId)).slice(0, limit);
+  const approved = approvedCandidates.filter((entry) => activeIds.has(String(entry._id)) && !entry.supersededBy).slice(0, limit);
   const expanded = await Promise.all(approved.map(async (expansion, index) => {
     const verses = await readReference(ctx, translation, expansion.passageRef);
     if (!verses.length) return null;
@@ -93,8 +93,8 @@ export const reviewExpansion = mutation({ args: { id: v.id("expansions"), status
   if (!row) throw new Error("Expansion not found.");
   if (args.status === "approved") {
     const versions = await ctx.db.query("expansions").withIndex("by_ref", (q) => q.eq("passageRef", row.passageRef)).take(1000);
-    for (const previous of versions.filter((r) => r._id !== row._id && r.translation === row.translation && r.type === row.type && r.status === "approved" && !r.supersededBy)) {
-      await ctx.db.patch(previous._id, { supersededBy: String(row._id) });
+    for (const previous of versions.filter((r) => r._id !== row._id && r.translation === row.translation && r.type === row.type && r.status === "approved")) {
+      await ctx.db.patch(previous._id, { supersededBy: generationKey(previous) === generationKey(row) ? undefined : String(row._id) });
     }
   }
   await ctx.db.patch(args.id, { status: args.status, ...(args.status === "approved" ? { supersededBy: undefined } : {}) });

@@ -14,7 +14,7 @@ async function check(name, fn) { try { await fn(); results.push({ name, passed: 
 try {
   await page.goto(process.env.APP_URL || 'http://127.0.0.1:5173');
   await page.getByLabel('Search Scripture').waitFor({ timeout: 20000 });
-  await page.getByLabel('Translation').locator('option[value="KJV"]').waitFor({ state: 'attached', timeout: 20000 });
+  await page.waitForFunction(() => document.querySelectorAll('select[aria-label="Translation"] option').length > 1, null, { timeout: 20000 });
   await mkdir('test-results', { recursive: true });
   await page.screenshot({ path: 'test-results/desktop-discover.png', fullPage: true });
   for (const [query, reference] of [
@@ -36,6 +36,14 @@ try {
     await page.getByLabel('Translation').selectOption('ASV');
     await page.waitForFunction(text => document.querySelector('.result-card blockquote')?.textContent !== text, before, { timeout: 10000 });
     assert.match(await page.locator('.result-card').first().textContent(), /ASV/);
+  });
+  await check('Literal mode and comparison use source search', async () => {
+    await page.getByRole('button', { name: 'Exact words', exact: true }).click();
+    await page.getByLabel('Compare with exact words').check();
+    await page.getByText('Literal search baseline', { exact: true }).waitFor();
+    await page.locator('.comparison-grid .result-card').first().waitFor();
+    await page.getByLabel('Compare with exact words').uncheck();
+    await page.getByRole('button', { name: 'Understanding search', exact: true }).click();
   });
   await check('Saved passage and note survive reload', async () => {
     await page.getByRole('button', { name: 'Save passage', exact: true }).first().click();

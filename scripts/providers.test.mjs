@@ -74,3 +74,26 @@ test('pipeline writes source-grounded rows and independently queues uncertain en
     await rm(dir, {recursive:true,force:true});
   }
 });
+
+test('native gateway adapter invokes protected Convex actions without provider credentials', async () => {
+  const originalFetch = globalThis.fetch;
+  const calls = [];
+  const config = {provider:'convex',convexUrl:'https://mock.convex.cloud',adminKey:'operator-test-key',model:'openai/gpt-4o-mini',maxTokens:1024};
+  try {
+    globalThis.fetch = async (url, options) => {
+      const body = JSON.parse(options.body);
+      calls.push({url,body});
+      const value = body.path === 'ai:generateJson' ? {value:{entries:[]},model:'openai/gpt-4o-mini',usage:null} : {model:'typesafe/jev-1.13',answers:{route:{type:'choice',choice:'person',confidence:0.9}}};
+      return {ok:true,status:200,json:async()=>({status:'success',value})};
+    };
+    const generated = await requestJson([{role:'system',content:'Return JSON.'},{role:'user',content:'Source words.'}],{config});
+    assert.deepEqual(generated.value,{entries:[]});
+    const decision = await jevProvider({question:'Who was he?'},{route:{type:'choice',instructions:'Route.',criteria:{person:'A person',topic:'A subject'}}},config);
+    assert.equal(decision.answers.route.choice,'person');
+    assert.deepEqual(calls.map(call=>call.body.path),['ai:generateJson','ai:decide']);
+    assert.ok(calls.every(call=>call.url==='https://mock.convex.cloud/api/action'));
+    assert.equal(calls[0].body.args[0].adminKey,'operator-test-key');
+    assert.equal(calls[0].body.args[0].maxTokens,1024);
+    assert.equal(providerConfig({BIBLE_AI_PROVIDER:'convex'}).model,'openai/gpt-4o-mini');
+  } finally {globalThis.fetch=originalFetch;}
+});
