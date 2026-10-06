@@ -6,7 +6,7 @@ The layer helps match a user's words to source references. It is machine-facing 
 
 ## Run generation
 
-Set `BIBLE_AI_API_KEY` or `OPENAI_API_KEY` securely in the shell environment. Do not commit it. The default uses OpenAI's chat completions endpoint with `gpt-4o-mini`; optionally set `BIBLE_AI_MODEL`, `BIBLE_AI_CHECK_MODEL`, and `BIBLE_AI_BASE_URL` to a provider's documented OpenAI-compatible endpoint and supported models. Each provider must support JSON-object chat responses. Remote endpoints require HTTPS.
+Set `BIBLE_AI_API_KEY` or `OPENAI_API_KEY` securely in the shell environment. Do not commit it. The default uses OpenAI's chat completions endpoint with `gpt-4o-mini`; optionally set `BIBLE_AI_MODEL`, `BIBLE_AI_CHECK_MODEL`, and `BIBLE_AI_BASE_URL` to a provider's documented OpenAI-compatible endpoint and supported models. Each provider must support JSON-object chat responses and the `max_tokens` option. Output is capped at 2,048 tokens per request by default; `BIBLE_AI_MAX_TOKENS` changes that cap. Remote endpoints require HTTPS.
 
 ```sh
 node scripts/generate-layer.mjs --dry-run --limit 1

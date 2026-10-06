@@ -1,5 +1,6 @@
 /** Provider-neutral OpenAI-compatible adapter. Never sends requests without explicit credentials. */
 export function providerConfig(env = process.env) {
+  const native = env.BIBLE_AI_PROVIDER === 'convex';
   const baseUrl = (env.BIBLE_AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
   const url = new URL(baseUrl);
   if (url.protocol !== 'https:' && !['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)) {
@@ -7,15 +8,22 @@ export function providerConfig(env = process.env) {
   }
   return {
     baseUrl,
+    provider: native ? 'convex' : 'openai-compatible',
+    convexUrl: env.CONVEX_URL || env.VITE_CONVEX_URL,
+    adminKey: env.CONVEX_ADMIN_KEY,
     apiKey: env.BIBLE_AI_API_KEY || env.OPENAI_API_KEY,
-    model: env.BIBLE_AI_MODEL || 'gpt-4o-mini',
-    checkModel: env.BIBLE_AI_CHECK_MODEL || env.BIBLE_AI_MODEL || 'gpt-4o-mini',
+    model: env.BIBLE_AI_MODEL || (native ? 'openai/gpt-4o-mini' : 'gpt-4o-mini'),
+    checkModel: env.BIBLE_AI_CHECK_MODEL || env.BIBLE_AI_MODEL || (native ? 'openai/gpt-4o-mini' : 'gpt-4o-mini'),
     timeoutMs: Number(env.BIBLE_AI_TIMEOUT_MS || 60000),
+    maxTokens: Number(env.BIBLE_AI_MAX_TOKENS || 2048),
   };
 }
 
 export async function requestJson(messages, options = {}) {
   const config = options.config || providerConfig();
+  if (config.provider === 'convex') {
+    return await nativeAction('ai:generateJson', {system: messages.find(m => m.role === 'system')?.content || '', user: messages.filter(m => m.role !== 'system').map(m => m.content).join('\n'), model: options.model || config.model, maxTokens: config.maxTokens || 2048}, config);
+  }
   if (!config.apiKey) throw new Error('Set BIBLE_AI_API_KEY (or OPENAI_API_KEY) in your environment. Never commit it.');
   const response = await fetch(`${config.baseUrl}/chat/completions`, {
     method: 'POST',
@@ -24,6 +32,7 @@ export async function requestJson(messages, options = {}) {
       model: options.model || config.model,
       messages,
       response_format: {type: 'json_object'},
+      max_tokens: config.maxTokens || 2048,
       ...(options.temperature !== undefined ? {temperature: options.temperature} : {}),
     }),
     signal: AbortSignal.timeout(config.timeoutMs),
@@ -61,6 +70,15 @@ export function verifyQuote(quote, sources) {
   return {valid: matches.length > 0, matches};
 }
 
-export function jevProvider() {
-  throw new Error('Jev is not configured: an authoritative supported API endpoint and credentials have not been verified. Use the configurable OpenAI-compatible adapter.');
+export function jevProvider(state, questions, config = providerConfig()) {
+  if (config.provider !== 'convex') throw new Error('Jev is not configured: set BIBLE_AI_PROVIDER=convex, CONVEX_URL and CONVEX_ADMIN_KEY for the documented native Convex alpha decision endpoint.');
+  return nativeAction('ai:decide', {state, questions}, config);
 }
+
+async function nativeAction(name, args, config) {
+  if (!config.convexUrl || !config.adminKey) throw new Error('Native Convex AI needs CONVEX_URL (or VITE_CONVEX_URL) and CONVEX_ADMIN_KEY.');
+  const {ConvexHttpClient} = await import('convex/browser');
+  const {makeFunctionReference} = await import('convex/server');
+  return new ConvexHttpClient(config.convexUrl).action(makeFunctionReference(name), {...args, adminKey: config.adminKey});
+}
+

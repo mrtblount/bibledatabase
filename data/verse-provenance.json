@@ -1,0 +1,30 @@
+[
+  {
+    "translation": "KJV",
+    "reference": "JOS.15.1",
+    "sourceUrl": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Joshua.json",
+    "license": "MIT; public-domain KJV text",
+    "reason": "Fills an empty verse in the upstream KJVPCE digital transcription; wording from separately identified KJV source."
+  },
+  {
+    "translation": "KJV",
+    "reference": "JOB.7.1",
+    "sourceUrl": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Job.json",
+    "license": "MIT; public-domain KJV text",
+    "reason": "Fills an empty verse in the upstream KJVPCE digital transcription; wording from separately identified KJV source."
+  },
+  {
+    "translation": "KJV",
+    "reference": "HOS.8.1",
+    "sourceUrl": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Hosea.json",
+    "license": "MIT; public-domain KJV text",
+    "reason": "Fills an empty verse in the upstream KJVPCE digital transcription; wording from separately identified KJV source."
+  },
+  {
+    "translation": "KJV",
+    "reference": "ROM.8.1",
+    "sourceUrl": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Romans.json",
+    "license": "MIT; public-domain KJV text",
+    "reason": "Fills an empty verse in the upstream KJVPCE digital transcription; wording from separately identified KJV source."
+  }
+]

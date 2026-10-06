@@ -15,10 +15,16 @@ DEFAULT=['KJVPCE','BSB','ASV','BBE','Darby','DRC','Geneva1599','JPS','NHEB','Web
 ADDITIONAL=['NHEBJE','NHEBME','OEB','OEBcth','CPDV','ACV','Anderson','Haweis','Noyes','Rotherham','Tyndale','Twenty','UKJV']
 LANG={'WLC':'hbo','StatResGNT':'grc'}
 MANIFEST=[]
+LOCKS={}
+for manifest_path in [PUBLIC/'source-manifest.json',PUBLIC/'knowledge-manifest.json']:
+ if manifest_path.exists():
+  LOCKS.update({r['file']:r['sha256'] for r in json.loads(manifest_path.read_text()).get('files',[])})
 def fetch(url,path):
  if path.exists():b=path.read_bytes()
- else:
-  b=urllib.request.urlopen(url,timeout=60).read();path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b)
+ else:b=urllib.request.urlopen(url,timeout=60).read()
+ digest=hashlib.sha256(b).hexdigest();expected=LOCKS.get(str(path.relative_to(ROOT)))
+ if expected and expected!=digest:raise ValueError(f'Checksum mismatch: {path}; review upstream changes before updating the manifest')
+ if not path.exists():path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b)
  MANIFEST.append({'url':url,'file':str(path.relative_to(ROOT)),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()});return b
 
 def download(source):
@@ -44,27 +50,40 @@ def main():
  RAW.mkdir(parents=True,exist_ok=True);PUBLIC.mkdir(parents=True,exist_ok=True)
  ids=args.translations or DEFAULT+(ADDITIONAL if args.all else [])
  results=list(concurrent.futures.ThreadPoolExecutor(max_workers=6).map(download,ids))
- catalog=[];total=0;book_count=0; omitted=[]
+ catalog=[];total=0;book_count=0; omitted=[];supplements={};supplement_rows=[];supplement_provenance=[]
+ if 'KJVPCE' in ids:
+  supplement_base='https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/'
+  fetch(supplement_base+'LICENSE',PUBLIC/'licenses'/'ArulJohn-KJV.txt')
+  for book_name,code,chapter,verse in [('Joshua','JOS',15,1),('Job','JOB',7,1),('Hosea','HOS',8,1),('Romans','ROM',8,1)]:
+   source_url=supplement_base+book_name+'.json'
+   doc=json.loads(fetch(source_url,RAW/('aruljohn-'+book_name+'.json')))
+   value=next(v['text'] for c in doc['chapters'] if int(c['chapter'])==chapter for v in c['verses'] if int(v['verse'])==verse)
+   reference=f'{code}.{chapter}.{verse}';supplements[reference]=value
+   supplement_provenance.append({'translation':'KJV','reference':reference,'sourceUrl':source_url,'license':'MIT; public-domain KJV text','reason':'Fills an empty verse in the upstream KJVPCE digital transcription; wording from separately identified KJV source.'})
  with (OUT/'verses.jsonl').open('w') as vf,(OUT/'books.jsonl').open('w') as bf,(OUT/'translations.jsonl').open('w') as tf:
   for source,lang,license_text,url,data in results:
-   tid='KJV' if source=='KJVPCE' else source.upper();count=0;seen=set()
+   tid='KJV' if source=='KJVPCE' else source.upper();count=0;edition_books=0;seen=set()
    for i,book in enumerate(data['books']):
     if not any(v['text'].strip() for c in book['chapters'] for v in c['verses']):continue
     code=BOOKMAP.get(norm(book['name']))
     if not code:raise ValueError(f'Unknown book {source}: {book["name"]}')
     order=CODES.index(code)+1 if code in CODES else 67+list(EXTRA.values()).index(code)
-    book_count+=1
+    book_count+=1;edition_books+=1
     write_row(bf,{'translation':tid,'id':code,'name':book['name'],'chapters':max(int(c['chapter']) for c in book['chapters']),'order':order})
     for chapter in book['chapters']:
      ch=int(chapter['chapter'])
      for verse in chapter['verses']:
       vn=int(verse['verse']);text=verse['text'].strip();ref=f'{code}.{ch}.{vn}'
+      is_supplement=source=='KJVPCE' and not text and ref in supplements
+      if is_supplement:text=supplements[ref]
       if not text:omitted.append({'translation':tid,'reference':ref,'reason':'empty source text'});continue
       if ref in seen:raise ValueError(f'Duplicate {tid} {ref}')
-      seen.add(ref);write_row(vf,{'translation':tid,'book':code,'chapter':ch,'verse':vn,'reference':ref,'text':text,'sortOrder':order*1000000+ch*1000+vn});count+=1
+      seen.add(ref);row={'translation':tid,'book':code,'chapter':ch,'verse':vn,'reference':ref,'text':text,'sortOrder':order*1000000+ch*1000+vn};write_row(vf,row);count+=1
+      if is_supplement:supplement_rows.append(row)
    license_value=license_text.split('License')[-1].strip('*: \n')
    title=data.get('translation',source).split(': ',1)[-1]
-   row={'id':tid,'name':title,'language':lang,'license':license_value,'sourceUrl':url,'verseCount':count,'description':f'Complete available source edition; {len(data["books"])} books. Verse numbering follows this edition.'}
+   row={'id':tid,'name':title,'language':lang,'license':license_value,'sourceUrl':url,'verseCount':count,'description':f'Complete available source edition; {edition_books} books with text. Verse numbering follows this edition.'}
+   if source=='KJVPCE':row['name']='King James Version (PCE with documented transcription supplements)';row['description']+=' Four empty digital transcription verses supplied from Arul John KJV (MIT); see data/verse-provenance.json.'
    write_row(tf,row);catalog.append(row);total+=count;print(f'Normalized {tid}: {count:,} verses',flush=True)
  cross_count=0
  if not args.skip_cross_references:
@@ -73,6 +92,9 @@ def main():
    for row in csv.reader(b.decode('utf-8-sig').splitlines()[1:],delimiter='\t'):
     if len(row)<3:continue
     write_row(f,{'from':canonical_ref(row[0]),'to':canonical_ref(row[1]),'label':'OpenBible cross-reference','type':'cross-reference','weight':int(row[2])});cross_count+=1
+ with (OUT/'verse-supplements.jsonl').open('w') as sf:
+  for row in supplement_rows:write_row(sf,row)
+ (PUBLIC/'verse-provenance.json').write_text(json.dumps(supplement_provenance,ensure_ascii=False,indent=2)+'\n')
  (PUBLIC/'translations.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
  report={'translations':len(catalog),'verses':total,'crossReferences':cross_count,'books':book_count,'omittedEmptyVerses':omitted,'files':sorted(MANIFEST,key=lambda x:x['file'])}
  (PUBLIC/'source-manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

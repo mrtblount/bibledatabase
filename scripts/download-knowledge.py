@@ -54,8 +54,13 @@ def main():
    if isinstance(description,list):description=' '.join(description)
    # No speculative chronology is treated as canonical; preserve only descriptive metadata.
    entities.append({'id':'theographic:'+row['id'],'name':name,'type':kind,'description':plain(description),'aliases':list(dict.fromkeys(str(f[x]) for x in ['kjvName','esvName','personLookup','placeLookup'] if f.get(x) and f[x]!=name)),'refs':list(dict.fromkeys([verse_ids[v] for v in f.get('verses',[]) if v in verse_ids]+verse_links.get(row['id'],[])))})
- with (m.OUT/'entities.jsonl').open('w') as f:
-  for row in entities:m.write_row(f,row)
+ reference_count=0
+ with (m.OUT/'entityReferences.jsonl').open('w') as rf,(m.OUT/'entities.jsonl').open('w') as ef:
+  for row in entities:
+   for reference in row['refs']:
+    m.write_row(rf,{'reference':reference,'entityId':row['id']});reference_count+=1
+   row['refs']=row['refs'][:100]
+   m.write_row(ef,row)
  lexical=[];seen=set()
  for source,lang in [('TBESG','grc'),('TBESH','hbo')]:
   for line in texts[source].splitlines():
@@ -71,7 +76,7 @@ def main():
    lexical.append(row)
  with (m.OUT/'lexicon.jsonl').open('w') as f:
   for row in lexical:m.write_row(f,row)
- counts={'entities':len(entities),'lexiconEntries':len(lexical)}
+ counts={'entities':len(entities),'lexiconEntries':len(lexical),'entityReferences':reference_count}
  stats={}
  stats_path=m.OUT/'datasetStats.jsonl'
  if stats_path.exists():stats={r['key']:r['value'] for r in map(json.loads,stats_path.read_text().splitlines())}

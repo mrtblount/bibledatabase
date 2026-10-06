@@ -9,13 +9,13 @@ const args = process.argv.slice(2);
 const dir = resolve(args.find(a => !a.startsWith('--')) || '.data');
 const replace = args.includes('--replace-source-data');
 const prod = args.includes('--prod');
-const tables = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'lexicon', 'datasetStats', 'passages', 'expansions', 'evaluationCases'];
+const tables = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'entityReferences', 'lexicon', 'datasetStats', 'passages', 'expansions', 'evaluationCases'];
 if (!existsSync(dir)) throw new Error(`No seed data in ${dir}. Run the download and layer-seed scripts first.`);
 let imported = 0;
 for (const table of tables) {
   const path = resolve(dir, `${table}.jsonl`);
   if (!existsSync(path)) continue;
-  const replaceable = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'lexicon', 'datasetStats'].includes(table);
+  const replaceable = ['translations', 'books', 'verses', 'crossReferences', 'entities', 'entityReferences', 'lexicon', 'datasetStats'].includes(table);
   const command = ['convex', 'import', '--table', table, path];
   if (replace && replaceable) command.push('--replace', '--yes');
   if (prod) command.push('--prod');

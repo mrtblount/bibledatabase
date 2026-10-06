@@ -1,0 +1,2409 @@
+{
+  "translations": 26,
+  "verses": 631885,
+  "crossReferences": 344799,
+  "books": 1371,
+  "omittedEmptyVerses": [
+    {
+      "translation": "BSB",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BSB",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ASV",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "BBE",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DARBY",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DARBY",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DARBY",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "2SA.13.39",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "1KI.17.19",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "PSA.150.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "PRO.30.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "SIR.29.35",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "ISA.46.13",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "BAR.6.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "JHN.11.57",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "2CO.1.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "1TH.4.18",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "2TH.2.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "DRC",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "NUM.12.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "NUM.29.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "1SA.23.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "2SA.1.27",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "EST.2.23",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.6.30",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.38.39",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.38.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.38.41",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.27",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.30",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.31",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.32",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.33",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JOB.41.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "PSA.13.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "PSA.72.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "PRO.8.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "ECC.5.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "ECC.6.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "ECC.6.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "SNG.1.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "SNG.6.13",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "ISA.52.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "JER.49.39",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "EZK.20.49",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "DAN.4.35",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "DAN.4.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "DAN.4.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "HOS.13.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "HAG.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "LUK.15.32",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "ROM.1.32",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "2CO.13.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "GAL.1.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "2JN.1.13",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "GENEVA1599",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "EXO.20.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "EXO.20.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "EXO.20.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "LEV.6.22",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "DEU.5.31",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "DEU.5.32",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "DEU.5.33",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "1SA.20.42",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "1KI.22.43",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.19",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.22",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.23",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "MAL.3.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "PSA.64.10",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "PSA.70.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "PSA.81.1",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "JPS",
+      "reference": "1CH.12.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEB",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MAT.16.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.9",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.10",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.13",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.18",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.19",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "MRK.16.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "LUK.22.43",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "LUK.22.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.1.52",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.7.53",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.1",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.8",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.9",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.10",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "JHN.8.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ACT.19.41",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ROM.14.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ROM.14.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ROM.14.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "2CO.13.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "STATRESGNT",
+      "reference": "REV.15.9",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBJE",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NHEBME",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.30.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.35.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.75.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.75.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.75.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.75.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.84.10",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.84.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.86.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.89.52",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.100.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.100.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.100.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.100.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.105.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.106.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.106.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.106.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.106.48",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.108.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.108.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.108.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.108.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.109.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.110.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.111.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.113.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.115.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.125.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.125.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.125.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.136.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.138.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.142.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "PSA.143.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "LUK.22.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "LUK.24.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "LUK.24.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "JHN.8.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEB",
+      "reference": "2TI.1.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.30.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.35.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.75.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.75.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.75.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.75.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.84.10",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.84.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.86.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.89.52",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.100.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.100.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.100.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.100.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.105.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.106.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.106.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.106.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.106.48",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.108.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.108.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.108.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.108.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.109.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.110.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.111.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.113.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.115.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.125.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.125.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.125.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.136.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.138.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.3",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.142.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "PSA.143.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "LUK.22.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "LUK.24.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "LUK.24.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "JHN.8.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "OEBCTH",
+      "reference": "2TI.1.2",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "CPDV",
+      "reference": "2SA.13.39",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "CPDV",
+      "reference": "PSA.42.6",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "CPDV",
+      "reference": "SIR.29.35",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "CPDV",
+      "reference": "2TH.2.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "CPDV",
+      "reference": "3JN.1.15",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "MAT.19.30",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "ACT.23.35",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "2CO.13.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "1TH.2.20",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "2TI.3.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "HEB.13.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "1PE.1.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "1JN.5.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "JUD.1.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ANDERSON",
+      "reference": "REV.4.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "ISA.39.8",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MAT.21.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MAT.23.14",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "LUK.24.12",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "LUK.24.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "JHN.21.25",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "NOYES",
+      "reference": "1JN.5.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MAT.23.13",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "ROTHERHAM",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "GEN.9.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "MAT.5.47",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "LUK.17.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "ROM.1.22",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "1CO.3.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "HEB.11.40",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TYNDALE",
+      "reference": "REV.21.27",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MAT.17.21",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MAT.18.11",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MRK.7.16",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MRK.9.44",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MRK.9.46",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MRK.11.26",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "MRK.15.28",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "LUK.17.36",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "LUK.23.17",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "JHN.5.4",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "JHN.8.5",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "ACT.8.37",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "ACT.15.34",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "ACT.24.7",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "ACT.28.29",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "ROM.16.24",
+      "reason": "empty source text"
+    },
+    {
+      "translation": "TWENTY",
+      "reference": "2TI.1.2",
+      "reason": "empty source text"
+    }
+  ],
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/ACV/README.md",
+      "file": ".data/all-verify/metadata/licenses/ACV.md",
+      "bytes": 57,
+      "sha256": "b919f4140f32ab4c3e653a6153461bf54a28c1c4ede64f5483bbf5d81d2fd023"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/ASV/README.md",
+      "file": ".data/all-verify/metadata/licenses/ASV.md",
+      "bytes": 67,
+      "sha256": "85016263b5bfda9c76cce3fad9562669b95794a7c73324cb7f43c9dd78c74f92"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Anderson/README.md",
+      "file": ".data/all-verify/metadata/licenses/Anderson.md",
+      "bytes": 86,
+      "sha256": "8a12006fe3d20574661110904085a4b9c2ebab20df013636caefc7e08b625dac"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/LICENSE",
+      "file": ".data/all-verify/metadata/licenses/ArulJohn-KJV.txt",
+      "bytes": 1066,
+      "sha256": "dffdd24f22741e7ef63b3b11307be9e18c73717120ef03c0744f98a91397fe70"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/BBE/README.md",
+      "file": ".data/all-verify/metadata/licenses/BBE.md",
+      "bytes": 67,
+      "sha256": "61978ba7fe936c48ca87cdb52c3aaa0c2226d3b94a980af401e8f169a3c95bb1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/BSB/README.md",
+      "file": ".data/all-verify/metadata/licenses/BSB.md",
+      "bytes": 63,
+      "sha256": "c678101ec1e81a6435afd759938bf3f85a37b16f90931488b2643bfa990e766e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/CPDV/README.md",
+      "file": ".data/all-verify/metadata/licenses/CPDV.md",
+      "bytes": 66,
+      "sha256": "8bf152a79154dcd2fc1d9aa2e81c3a667a82c2b14e7065b6a273d02c720fddd3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/DRC/README.md",
+      "file": ".data/all-verify/metadata/licenses/DRC.md",
+      "bytes": 73,
+      "sha256": "1d211b1718a2d8e94891284e32147799f92b1cf77bcb1d70446d32a7f8e41a53"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Darby/README.md",
+      "file": ".data/all-verify/metadata/licenses/Darby.md",
+      "bytes": 55,
+      "sha256": "3db18c1af60da6dd9c514323af0b0d5b79c9c1d18ae4076531808fdad72e3eb2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Geneva1599/README.md",
+      "file": ".data/all-verify/metadata/licenses/Geneva1599.md",
+      "bytes": 61,
+      "sha256": "ca95c21e43ffc28856adefea7b1f3e1856c4a0c6f93e2e21a0b837fa04255ed3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Haweis/README.md",
+      "file": ".data/all-verify/metadata/licenses/Haweis.md",
+      "bytes": 70,
+      "sha256": "699e23515289dd2f133673a396f9439f391c099c47bf664eec46494132142201"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/JPS/README.md",
+      "file": ".data/all-verify/metadata/licenses/JPS.md",
+      "bytes": 75,
+      "sha256": "8680a3328c589566e57836237fcf7e51bfc78eb3a8e7407f131e3d7c72121353"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/KJVPCE/README.md",
+      "file": ".data/all-verify/metadata/licenses/KJVPCE.md",
+      "bytes": 80,
+      "sha256": "e7e3a7f0a0621e1508e8f26fcd3c02efe5c3e5c374d001f899d61a0e639b51dc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/NHEB/README.md",
+      "file": ".data/all-verify/metadata/licenses/NHEB.md",
+      "bytes": 59,
+      "sha256": "6fafdfc2cd3d3f339529b64506fc1188de7fdbd603599fb835bcde3ea30b089c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/NHEBJE/README.md",
+      "file": ".data/all-verify/metadata/licenses/NHEBJE.md",
+      "bytes": 78,
+      "sha256": "4809641b6ec2193fb0bd65f9f2b601d8449b8b5d25a78e988ed4602a7c17767e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/NHEBME/README.md",
+      "file": ".data/all-verify/metadata/licenses/NHEBME.md",
+      "bytes": 80,
+      "sha256": "2b408bbc28aba2ac9bd7afa77c603939679be288082b4b5c60ccedeaae313d88"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Noyes/README.md",
+      "file": ".data/all-verify/metadata/licenses/Noyes.md",
+      "bytes": 59,
+      "sha256": "24c5ddaaf5d3e4add57f4c59b74bd549c8d58bc8566ce7c8ab9125369bd4b3b9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/OEB/README.md",
+      "file": ".data/all-verify/metadata/licenses/OEB.md",
+      "bytes": 75,
+      "sha256": "451fde29691ac79c50a9e48812213ae66b46215d9a44920fb81ce9db800e38d7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/OEBcth/README.md",
+      "file": ".data/all-verify/metadata/licenses/OEBcth.md",
+      "bytes": 90,
+      "sha256": "cf219c002c17febf12877e9fbf683264a2a901525679c215e104148da76897e5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Rotherham/README.md",
+      "file": ".data/all-verify/metadata/licenses/Rotherham.md",
+      "bytes": 80,
+      "sha256": "295ca37006e1e59bf991c433489dc5b9d156aa01fba9e1c73574033b9acf0363"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/grc/StatResGNT/README.md",
+      "file": ".data/all-verify/metadata/licenses/StatResGNT.md",
+      "bytes": 96,
+      "sha256": "a49df6d6589f9004d9f9ee1a162b40a24d8b289390835a12d7f4702abefc2100"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Twenty/README.md",
+      "file": ".data/all-verify/metadata/licenses/Twenty.md",
+      "bytes": 70,
+      "sha256": "ab685b153fbe8bf5ef17b6bf0da9bcc363370b00b35049f8a1d0455b355d99ce"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Tyndale/README.md",
+      "file": ".data/all-verify/metadata/licenses/Tyndale.md",
+      "bytes": 72,
+      "sha256": "d4037e737bf1842c727088b2c9138ee0b7883bf38d5acd70efaf4e977628048e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/UKJV/README.md",
+      "file": ".data/all-verify/metadata/licenses/UKJV.md",
+      "bytes": 62,
+      "sha256": "43e78766c8fe4ed4c3a7594b760577d78b2c6b02ecfeb4e921cd1f4b56371f8b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/hbo/WLC/README.md",
+      "file": ".data/all-verify/metadata/licenses/WLC.md",
+      "bytes": 62,
+      "sha256": "11fd3699b98023ff983b55f153048fa38c18b35633b4b14c5953e2cc6422e3de"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/Webster/README.md",
+      "file": ".data/all-verify/metadata/licenses/Webster.md",
+      "bytes": 52,
+      "sha256": "b823102e852cd6599e025be2605f575be98d9b73f350ffa5217ce768ef63ed29"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/en/YLT/README.md",
+      "file": ".data/all-verify/metadata/licenses/YLT.md",
+      "bytes": 69,
+      "sha256": "f593a17f6ca36999f8a3368d1c59ce0857897fef8feefd2e5eaaa0f720c145d6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/ACV.json",
+      "file": ".data/raw/ACV.json",
+      "bytes": 8343074,
+      "sha256": "be0e93197e8590addb9e8a74fcc3b1c61a7e74fc1b46e42d07f8e2a6ab69d859"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/ASV.json",
+      "file": ".data/raw/ASV.json",
+      "bytes": 8401279,
+      "sha256": "602445e22c280a682ac4c489117ead179271f5ee50a78ee4531b249c71e7ce99"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Anderson.json",
+      "file": ".data/raw/Anderson.json",
+      "bytes": 5221926,
+      "sha256": "b60727e613ad9a4ebf651f138a4b5d3d519aa0619089ef7fef5b2f196d0f3a1b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/BBE.json",
+      "file": ".data/raw/BBE.json",
+      "bytes": 8419831,
+      "sha256": "2396c027cfd1c47c9bb325c5c1ed1b1c125b95ef4c5382ddba4f8e50651f8068"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/BSB.json",
+      "file": ".data/raw/BSB.json",
+      "bytes": 8133303,
+      "sha256": "cec3c644088a8ef4a50cf1e2de035f79d8825f394625d116bb7ee7e1d57739c9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/CPDV.json",
+      "file": ".data/raw/CPDV.json",
+      "bytes": 10027217,
+      "sha256": "f91a5dc9556d77a441a18adff5a272f8f4b1fea1745e01d0c3c2a93aa7929a38"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/DRC.json",
+      "file": ".data/raw/DRC.json",
+      "bytes": 9730004,
+      "sha256": "7575ae63082a69d22e6781e036dd829e3779c169e203c3c38b69e2444ac59d42"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Darby.json",
+      "file": ".data/raw/Darby.json",
+      "bytes": 8354331,
+      "sha256": "5f3c9dd04a4d92084a8f506baf62972f9a6c45aa0ea390e3bcdaea71e3aeb294"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Geneva1599.json",
+      "file": ".data/raw/Geneva1599.json",
+      "bytes": 8435092,
+      "sha256": "7a9bb411247d382e6737a95fcdca3087c29da396e55e126d3e36d18c53ab1e6d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Haweis.json",
+      "file": ".data/raw/Haweis.json",
+      "bytes": 5246643,
+      "sha256": "249d0d71331d858ca8997bb28b9cada13a417f2f38947844803adbe5e0558b92"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/JPS.json",
+      "file": ".data/raw/JPS.json",
+      "bytes": 6374024,
+      "sha256": "cb698cfbf2e97843dd4357b725c96ac6e9b2f3f23c5e3e3f6a3cdb5912ca183a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/KJVPCE.json",
+      "file": ".data/raw/KJVPCE.json",
+      "bytes": 8406967,
+      "sha256": "a632f7e323178bcc30731ca26173a6183a272f0a58003125ca975d55c8663c68"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEB.json",
+      "file": ".data/raw/NHEB.json",
+      "bytes": 8292020,
+      "sha256": "45c42baa7053244f244aed3fe89214dc10c13c70ffec6338b8d2d01087c7f6d4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEBJE.json",
+      "file": ".data/raw/NHEBJE.json",
+      "bytes": 8288028,
+      "sha256": "fd9dc5fca415512fd85779a2e8cee080eb769791a4dfc330c81ef982661f1b52"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/NHEBME.json",
+      "file": ".data/raw/NHEBME.json",
+      "bytes": 8294628,
+      "sha256": "733cbf13afa391943cc1a9314e5edc9a870d9f3674b73c627ca20224d3fd4c26"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Noyes.json",
+      "file": ".data/raw/Noyes.json",
+      "bytes": 6481650,
+      "sha256": "870176b5aae14a64f25a9c6649ebad894929f62ea642cbaa544fcb5864c0ed6b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/OEB.json",
+      "file": ".data/raw/OEB.json",
+      "bytes": 5495085,
+      "sha256": "7b1552b1d39027f909f23e5b0dc25116fb1dd6c785cac5aac4c2e56dd1082c89"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/OEBcth.json",
+      "file": ".data/raw/OEBcth.json",
+      "bytes": 5495259,
+      "sha256": "32883123a567f205866abab0e8ec571013ce594026b9e58505962534d7214176"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Rotherham.json",
+      "file": ".data/raw/Rotherham.json",
+      "bytes": 8646314,
+      "sha256": "edbb422901c243c5d2d6f798cb1caf6df992df7bd562c10e8afc8124ef574960"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/StatResGNT.json",
+      "file": ".data/raw/StatResGNT.json",
+      "bytes": 7120634,
+      "sha256": "ed79e95670f2d5ce24ff08bbfc81476439d974d0840e2a9ca5622be2da010743"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Twenty.json",
+      "file": ".data/raw/Twenty.json",
+      "bytes": 5297760,
+      "sha256": "db7507bb8b4fc4408d79b370e048a3af599b1c82b016e687c1855682f30144c4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Tyndale.json",
+      "file": ".data/raw/Tyndale.json",
+      "bytes": 5220587,
+      "sha256": "5c63aa4ff1634d24fc26d6037957ec2a066975aaa55485f5b834a85c9c7e7a63"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/UKJV.json",
+      "file": ".data/raw/UKJV.json",
+      "bytes": 8413810,
+      "sha256": "bdfd7bbc03786a1c077ff292595f8768d201582a87b236d2466c603fdc9cc01b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/WLC.json",
+      "file": ".data/raw/WLC.json",
+      "bytes": 8569928,
+      "sha256": "9e126b91beee6feb87378b7bb84092093c2f76752cf0f043f3c81b611a3473fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/Webster.json",
+      "file": ".data/raw/Webster.json",
+      "bytes": 8404587,
+      "sha256": "21d32fca7a463385a5049aca0894318fd60396211be72fd8e8ee9ed76bd6355e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/formats/json/YLT.json",
+      "file": ".data/raw/YLT.json",
+      "bytes": 8382339,
+      "sha256": "d55ef42dae715c4fc5d00049011b818a42a99e0ff419f5f08bc37cea0b4f12e3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Hosea.json",
+      "file": ".data/raw/aruljohn-Hosea.json",
+      "bytes": 32970,
+      "sha256": "d9c67c8cdf20844557401b4f3f16d52fa9f72060705f6b6ac97b276ec8f8994d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Job.json",
+      "file": ".data/raw/aruljohn-Job.json",
+      "bytes": 125276,
+      "sha256": "c671b8e94b78b2c9dad6378ddab070275f46df0c59adf1c8b694eddd4a8fc6ae"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Joshua.json",
+      "file": ".data/raw/aruljohn-Joshua.json",
+      "bytes": 119213,
+      "sha256": "e5f63c9ccd0cb74cec1ffdcea0f12aadf1c57aa6059f2ac15aec975befda49fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/aruljohn/Bible-kjv/a9aa4e55afbb3e095f57e4b14cd1f22c5ee8d7c9/Romans.json",
+      "file": ".data/raw/aruljohn-Romans.json",
+      "bytes": 62801,
+      "sha256": "64eef20e95187668ae50802e0cbb79c1e3243f84c045cab8b724cdd991a5220f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/scrollmapper/bible_databases/e1b254cef86d0e65b1a5d1a94b8b112d0f296a2c/sources/extras/cross_references.txt",
+      "file": ".data/raw/cross_references.txt",
+      "bytes": 8293834,
+      "sha256": "452b263f657d3e721d20341b6b82f1196fc98882d685bd4ef9050ae17f033f82"
+    }
+  ],
+  "configuration": "Optional --all export; primary imported data remains the13-edition source-manifest.json."
+}

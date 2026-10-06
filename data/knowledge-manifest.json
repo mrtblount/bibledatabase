@@ -3,6 +3,7 @@
   "theographicEntities": 4791,
   "entities": 9049,
   "lexiconEntries": 21293,
+  "entityReferences": 85266,
   "files": [
     {
       "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/1f3423d42400f59f1f30fe08f74e38fcd3bbf7bc/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",

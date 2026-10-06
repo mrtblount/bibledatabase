@@ -18,12 +18,14 @@ Complete Convex's device/browser login when prompted, select or create the cloud
 ```sh
 python3 scripts/download-data.py --all
 node scripts/seed-layer.mjs
+python3 scripts/download-knowledge.py
+python3 scripts/catalog-translations.py
 npm run validate:data
 npm run seed
 npm run dev
 ```
 
-The data commands prepare full licensed editions, cross-references, curated passages, expansions and the initial graph. Downloads and normalized bulk data go under ignored `.data/`; source manifests, license texts, application code, import scripts and curated data live in Git. The importer checks each translation's source license before importing it. Translation availability and verse numbering follow each source edition.
+The data commands prepare full licensed editions, cross-references, curated passages, expansions, STEPBible lexical resources and the initial graph. Downloads and normalized bulk data go under ignored `.data/`; source manifests, license texts, application code, import scripts and curated data live in Git. The importer checks each translation's source license before importing it. Translation availability and verse numbering follow each source edition.
 
 `npm run seed` appends data. Run it once per fresh deployment to avoid duplicates. After inspecting your deployment, `npm run seed -- --replace-source-data` can refresh only the source tables; it deliberately preserves notes, review records and generated layer history. For production, pass `--prod`. Do not run replacement against a deployment containing source customizations you need to retain.
 

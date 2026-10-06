@@ -111,7 +111,8 @@ export async function main(argv = process.argv.slice(2)) {
   }
   if (planned > maxRequests) throw new Error(`This run needs at most ${planned} requests, above --max-requests ${maxRequests}. Reduce --limit or explicitly raise the cap.`);
   const config = providerConfig();
-  if (!config.apiKey) throw new Error('Missing AI credential. Set BIBLE_AI_API_KEY or OPENAI_API_KEY; use --dry-run to inspect sources without a key.');
+  if (config.provider === 'convex' && (!config.convexUrl || !config.adminKey)) throw new Error('Native Convex AI requires CONVEX_URL or VITE_CONVEX_URL plus CONVEX_ADMIN_KEY.');
+  if (config.provider !== 'convex' && !config.apiKey) throw new Error('Missing AI credential. Set BIBLE_AI_API_KEY or OPENAI_API_KEY; use --dry-run to inspect sources without a key.');
   const runId = `${new Date().toISOString().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`;
   const outputDir = resolve('.data/layers');
   await mkdir(outputDir, {recursive: true});
@@ -152,7 +153,7 @@ export async function main(argv = process.argv.slice(2)) {
             sourceRefs: passage.sourceWords.map(v => ({reference: v.reference, translation: v.translation})),
             sourceWords: passage.sourceWords.map(v => ({reference: v.reference, translation: v.translation, text: v.text})),
             priorEntryIds: history.get(`${passage.reference}|${primary}|${type}`) || [],
-            generatedAt: new Date().toISOString(), provider: new URL(config.baseUrl).origin,
+            generatedAt: new Date().toISOString(), provider: config.provider === 'convex' ? 'convex-ai-gateway' : new URL(config.baseUrl).origin,
           },
         };
         await appendFile(output, `${JSON.stringify(row)}\n`);

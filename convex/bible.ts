@@ -50,7 +50,19 @@ export const search = query({ args: { q: v.string(), translation: v.string(), mo
   const literalRows = await ctx.db.query("verses").withSearchIndex("search_text", (s) => s.search("text", q).eq("translation", translation)).take(limit);
   const literal = literalRows.map((row, index) => ({ ref: row.reference, title: row.reference, text: row.text, book: row.book, chapter: row.chapter, verse: row.verse, endVerse: row.verse, score: 1 / (index + 1), reason: "Matches the words in the selected translation", tags: [] as string[], translation }));
   if (args.mode === "literal") return { results: literal, route: "literal" };
-  const approved = await ctx.db.query("expansions").withSearchIndex("search_text", (s) => s.search("text", q).eq("status", "approved")).take(limit);
+  const approvedCandidates = await ctx.db.query("expansions").withSearchIndex("search_text", (s) => s.search("text", q).eq("status", "approved")).take(Math.min(limit * 3, 100));
+  const supersededEntries = new Set(approvedCandidates.flatMap((entry) => entry.provenance?.priorEntryIds ?? []));
+  const versionGroups = await Promise.all([...new Set(approvedCandidates.map((entry) => entry.passageRef))].map(async (ref) => {
+    const versions = await ctx.db.query("expansions").withIndex("by_ref", (index) => index.eq("passageRef", ref)).order("desc").take(200);
+    const active = new Map<string, typeof versions[number]>();
+    for (const version of versions.filter((row) => row.status === "approved" && !row.supersededBy).sort((a, b) => (b.createdAt ?? b._creationTime) - (a.createdAt ?? a._creationTime))) {
+      const key = `${version.translation}:${version.type}`;
+      if (!active.has(key)) active.set(key, version);
+    }
+    return [...active.values()].map((row) => String(row._id));
+  }));
+  const activeIds = new Set(versionGroups.flat());
+  const approved = approvedCandidates.filter((entry) => activeIds.has(String(entry._id)) && !entry.supersededBy && !supersededEntries.has(entry.provenance?.entryId)).slice(0, limit);
   const expanded = await Promise.all(approved.map(async (expansion, index) => {
     const verses = await readReference(ctx, translation, expansion.passageRef);
     if (!verses.length) return null;
@@ -74,12 +86,18 @@ export const search = query({ args: { q: v.string(), translation: v.string(), mo
 } });
 
 export const listPassages = query({ args: {}, handler: async (ctx) => await ctx.db.query("passages").take(500) });
-export const listExpansions = query({ args: {}, handler: async (ctx) => await ctx.db.query("expansions").order("desc").take(500) });
+export const listExpansions = query({ args: {}, handler: async (ctx) => await ctx.db.query("expansions").order("desc").take(1000) });
 export const reviewExpansion = mutation({ args: { id: v.id("expansions"), status: v.union(v.literal("draft"), v.literal("approved"), v.literal("rejected")), adminKey: v.string() }, handler: async (ctx, args) => {
   requireAdmin(args.adminKey);
   const row = await ctx.db.get(args.id);
   if (!row) throw new Error("Expansion not found.");
-  await ctx.db.patch(args.id, { status: args.status });
+  if (args.status === "approved") {
+    const versions = await ctx.db.query("expansions").withIndex("by_ref", (q) => q.eq("passageRef", row.passageRef)).take(1000);
+    for (const previous of versions.filter((r) => r._id !== row._id && r.translation === row.translation && r.type === row.type && r.status === "approved" && !r.supersededBy)) {
+      await ctx.db.patch(previous._id, { supersededBy: String(row._id) });
+    }
+  }
+  await ctx.db.patch(args.id, { status: args.status, ...(args.status === "approved" ? { supersededBy: undefined } : {}) });
   return { ...row, status: args.status };
 } });
 export const saved = query({ args: { sessionId: v.string() }, handler: async (ctx, { sessionId }) => { requireSession(sessionId); return await ctx.db.query("savedPassages").withIndex("by_session", (q) => q.eq("sessionId", sessionId)).order("desc").take(500); } });
@@ -107,16 +125,17 @@ export const saveNote = mutation({ args: { sessionId: v.string(), id: v.id("save
 export const graph = query({ args: { ref: v.string() }, handler: async (ctx, args) => {
   const parsed = parseReference(args.ref);
   const ref = parsed ? `${parsed.book}.${parsed.chapter}.${parsed.verseStart ?? 1}` : args.ref;
-  const [outgoing, incoming, entities] = await Promise.all([
+  const [outgoing, incoming, entityLinks] = await Promise.all([
     ctx.db.query("crossReferences").withIndex("by_from", (q) => q.eq("from", ref)).take(24),
     ctx.db.query("crossReferences").withIndex("by_to", (q) => q.eq("to", ref)).take(12),
-    ctx.db.query("entities").take(500),
+    ctx.db.query("entityReferences").withIndex("by_reference", (q) => q.eq("reference", ref)).take(30),
   ]);
+  const entities = await Promise.all([...new Set(entityLinks.map((r) => r.entityId))].slice(0, 12).map((id) => ctx.db.query("entities").withIndex("by_identifier", (q) => q.eq("id", id)).unique()));
   const refs = [...outgoing, ...incoming];
   const ids = new Set([ref, ...refs.flatMap((r) => [r.from, r.to])]);
-  const nodes: { id: string; label: string; type: string }[] = [...ids].map((id) => ({ id, label: id, type: id === ref ? "selected" : "verse" }));
+  const nodes: { id: string; label: string; type: string }[] = [...ids].map((id) => ({ id, label: id === ref ? args.ref : id, type: id === ref ? "selected" : "verse" }));
   const edges = refs.map((r) => ({ source: r.from, target: r.to, label: r.label, weight: r.weight }));
-  for (const entity of entities.filter((e) => e.refs.some((r: string) => overlapsReference(r, args.ref))).slice(0, 8)) {
+  for (const entity of entities.filter((e): e is NonNullable<typeof e> => e !== null).slice(0, 12)) {
     nodes.push({ id: `entity:${entity.id}`, label: entity.name, type: entity.type });
     edges.push({ source: ref, target: `entity:${entity.id}`, label: "mentions", weight: 1 });
   }
